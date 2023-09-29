@@ -20,12 +20,17 @@
 	<body>
 		{# barre de navigation  #}
 		<nav>
-			<ol>
+			<ul>
 				<li><a href="#">Section 1</a></li>
 				<li><a href="#">Section 2</a></li>
 				<li><a href="#">Calendrier</a></li>
+                {% if app.user %}
+				    <li>{{ app.user.nom ~ "," ~app.user.prenom }}</li>
+            
+                {% endif %}
+                
 				<li><a href="{{path('app_logout')}}">Logout</a></li>
-			</ol>
+			</ul>
 		</nav>
 		{% block body %}{% endblock %}
 	</body>
