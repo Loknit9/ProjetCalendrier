@@ -4,4 +4,4 @@ symfony console doctrine:database:create
 symfony console make:migration
 symfony console doctrine:migration:migrate
 @REM pour remplir la BD avec des fausses données
-@REM symfony console doctrine:fixtures:load
+symfony console doctrine:fixtures:load
